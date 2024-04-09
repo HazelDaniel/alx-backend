@@ -7,7 +7,7 @@ from flask_babel import Babel
 
 
 class Config:
-    '''Config class'''
+    """the class for the i18n configuration"""
 
     DEBUG = True
     LANGUAGES = ["en", "fr"]
