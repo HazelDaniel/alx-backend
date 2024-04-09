@@ -20,12 +20,12 @@ babel = Babel(app)
 
 
 @babel.localeselector
-def get_locale() -> str:
-    """selecting locale based on best match"""
+def get_locale() -> str | None:
+    """selecting locale based on url parameter"""
     locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return None
 
 
 @app.route('/')
@@ -33,7 +33,8 @@ def index() -> str:
     """the index route handler"""
     return render_template("4-index.html")
 
-# babel.init_app(app, locale_selector=get_locale)
+
+babel.init_app(app, locale_selector=get_locale)
 
 
 if __name__ == "__main__":
