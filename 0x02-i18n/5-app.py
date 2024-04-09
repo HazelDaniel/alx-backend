@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""module for flask app and babel"""
+"""
+A Basic flask application that mocks a DB table
+and parameterizes the template
+"""
 
 from flask import Flask, render_template, request, g
 from flask_babel import Babel
