@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """force locale based on url parameter"""
 
-from flask import Flask, render_template, request
 from flask_babel import Babel
+from flask import Flask, render_template, request
 
 
 class Config:
@@ -34,7 +34,7 @@ def index() -> str:
     return render_template("4-index.html")
 
 
-babel.init_app(app, locale_selector=get_locale)
+# babel.init_app(app, locale_selector=get_locale)
 
 
 if __name__ == "__main__":
