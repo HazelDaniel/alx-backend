@@ -32,7 +32,7 @@ def index() -> str:
     return render_template("3-index.html")
 
 
-babel.init_app(app, locale_selector=get_locale)
+# babel.init_app(app, locale_selector=get_locale)
 
 
 if __name__ == "__main__":
