@@ -43,5 +43,5 @@ class Auth:
         return request.headers.get("Authorization", None)
 
     def current_user(self, request=None) -> TypeVar('User'):
-        """ Method that checks the current user """
+        """ Method that checks the current user"""
         return None
